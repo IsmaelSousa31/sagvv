@@ -1,0 +1,335 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #4B0082;
+   
+}
+
+/* Aumentando o header e ajustando o layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; /* Cor branca para o topo */
+    padding: 0 50px; /* Espaçamento nos lados */
+    height: 100px; /* Altura do cabeçalho */
+    border-bottom: 1px solid #E0E0E0; /* Linha separadora (opcional) */
+    position: sticky; /* Fixa o topo ao rolar */
+    top: 0; /* Mantém o topo no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+    
+}
+
+/* Espaçamento e posicionamento da logo */
+header .logo {
+    margin-right: 20px; /* Espaço entre a logo e o menu */
+}
+
+header .logo img {
+    height: 80px; /* Tamanho ajustado da logo */
+}
+
+/* Menu centralizado */
+nav {
+    flex-grow: 1; /* O menu ocupa espaço restante no centro */
+    display: flex;
+    justify-content: center;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaçamento entre os itens do menu */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo dos links do menu */
+nav .menu a {
+    text-decoration: none;
+    color: #4B0082; /* Roxo escuro */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .menu a:hover {
+    color: #A020F0; /* Roxo mais claro */
+}
+
+/* Botão "Marque sua consulta" */
+nav .menu .marque-consulta {
+    color: #FFFFFF; /* Texto branco */
+    background-color: #9400D3; /* Roxo escuro */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav .menu .marque-consulta:hover {
+    background-color: #8A2BE2; /* Roxo mais claro ao hover */
+}
+
+
+main {
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h1 {
+    color: #A020F0;
+    font-size: 1.8rem;
+}
+
+.treatment-list {
+    list-style-type: square;
+    color: #4B0082;
+}
+
+.treatment-list a {
+    text-decoration: none;
+    color: #8A2BE2;
+    transition: color 0.3s;
+}
+
+.treatment-list a:hover {
+    color: #9400D3;
+}
+
+#contatos img {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+
+
+/* Container para os tratamentos */
+.tratamentos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas, uma para cada categoria */
+    gap: 20px; /* Espaço entre as colunas */
+    margin-top: 30px;
+}
+
+/* Estilo de cada categoria de tratamento */
+.tratamento {
+    background-color: #f8f8f8; /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+    text-align: center;
+}
+
+/* Título das categorias */
+.tratamento h2 {
+    color: #9400D3;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Lista de tópicos */
+.tratamento ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.tratamento ul li {
+    color: #4B0082;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Imagem abaixo de cada categoria */
+.tratamento img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tratamento img:hover {
+    transform: scale(1.05); /* Efeito de zoom quando a imagem for "hovered" */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .tratamentos-container {
+        grid-template-columns: 1fr; /* Fica uma coluna única em telas menores */
+    }
+}
+
+/* Garante que os itens de tratamento fiquem alinhados */
+.tratamento-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre as colunas */
+    margin-bottom: 40px; /* Espaço entre as seções */
+}
+
+/* Cada item de tratamento */
+.tratamento-item {
+    flex: 1 1 300px; /* Flexível, com tamanho base de 300px, mas pode crescer */
+    text-align: center; /* Centraliza o texto e a imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Alinha as imagens para ficarem do mesmo tamanho */
+.tratamento-item img {
+    width: 100%; /* Imagem ocupa toda a largura do seu contêiner */
+    max-width: 300px; /* Limita a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+}
+
+/* Ajusta os títulos */
+.tratamento-item h3 {
+    color: #4B0082; /* Cor do título */
+    margin-bottom: 15px; /* Espaço entre o título e a imagem */
+}
+
+.tratamento img {
+    width: 100%;
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tratamento img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+#tratamentos {
+    padding-top: 100px; /* Espaço extra para evitar sobreposição */
+    margin-top: -100px; /* Compensa o espaço extra na rolagem */
+}
+
+#tratamentos h1 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 2.5rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #9400D3; /* Cor personalizada, se desejar */
+}
+
+
+/* Ajustes para garantir que o conteúdo do 'Sobre Mim' não seja coberto pelo topo */
+#sobre-mim {
+    padding-top: 110px; /* Ajuste para que a seção não fique coberta pelo cabeçalho fixo */
+}
+
+.sobre-mim-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espaçamento entre imagem e texto */
+}
+
+.sobre-mim-imagem {
+    flex: 1;
+    max-width: 350px; /* Limita o tamanho da imagem */
+}
+
+.sobre-mim-imagem img {
+    width: 100%; /* A imagem vai ocupar todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+}
+
+.sobre-mim-texto {
+    flex: 2; /* Texto ocupa 2x mais espaço que a imagem */
+    padding: 20px;
+    text-align: justify; /* Justifica o texto */
+    color: #4B0082; /* Cor do texto */
+    max-width: 70%; /* Limita a largura do texto */
+    min-height: 300px; /* Definir altura mínima para garantir que o texto não seja cortado */
+}
+
+.sobre-mim-texto h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #9400D3; /* Cor personalizada, se desejar */
+}
+
+.sobre-mim-texto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sobre-mim-texto ul li {
+    margin: 5px 0;
+}
+
+
+#contatos img {
+  
+ display: block;
+    
+}
+
+/* Tabela de Valores */
+#valores {
+    padding-top: 100px;
+    margin: 50px auto; /* Centraliza a seção com espaçamento acima e abaixo */
+    max-width: 1200px; /* Define uma largura máxima */
+    text-align: center; /* Centraliza o texto */
+}
+
+#valores h1 {
+        text-align: center; /* Centraliza o texto horizontalmente */
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte */
+        margin-bottom: 20px; /* Espaço abaixo do título */
+        color: #9400D3; /* Cor personalizada, se desejar */
+}
+
+/* Container da Tabela de Valores */
+.valores-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.valor {
+    background-color: #f8f8f8; /* Fundo claro */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.valor h2 {
+    color: #4B0082;
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza os subtítulos */
+}
+
+.valor ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+}
+
+.valor ul li {
+    color: #4B0082;
+    font-size: 1.1rem;
+    margin-bottom: 10px; /* Espaço entre os itens */
+}
+
